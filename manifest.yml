@@ -1,0 +1,18 @@
+modules:
+  jira:globalPage:
+    - key: github-webhook-hello-world
+      function: main
+      title: github-webhook
+  webtrigger:
+    - key: github-listener
+      function: webhook-Listener
+  function:
+    - key: main
+      handler: index.run
+    - key: webhook-Listener
+      handler: github-webhook.listener
+app:
+  id: ari:cloud:ecosystem::app/3f23fd49-b26f-48c8-ba85-2989b08d4e78
+permissions:
+  scopes:
+    - storage:app
